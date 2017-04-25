@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="kaifanla">
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+  <link rel="stylesheet" href="css/ionic.css"/>
+  <link rel="stylesheet" href="css/kaifanla.css"/>
+  <script src="js/ionic.bundle.js"></script>
+  <script src="js/kaifanla.js"></script>
+  <title></title>
+</head>
+<body ng-controller="parentCtrl">
+
+<div ui-view>
+
+</div>
+
+<ion-tabs class="tabs-icon-top">
+  <ion-tab icon="ion-home"
+           on-select="jump('start')"
+           title="主页"></ion-tab>
+  <ion-tab icon="ion-person"
+           on-select="jump('myOrder')"
+           title="个人中心"></ion-tab>
+  <ion-tab icon="ion-bag"
+           on-select="jump('cart')"
+           badge="data.totalNumInCart"
+           badge-style="badge-assertive"
+           title="购物车"></ion-tab>
+  <ion-tab icon="ion-ios-gear"
+           on-select="jump('setting')"
+           title="设置"></ion-tab>
+</ion-tabs>
+
+</body>
+</html>
